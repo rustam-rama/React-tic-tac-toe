@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Square = ({ value, onClick, isWinner }) => {
+const SquareLayout = ({ value, onClick, isWinner }) => {
   return (
     <button 
       className={`square ${isWinner ? 'winner' : ''}`}
@@ -12,4 +13,10 @@ const Square = ({ value, onClick, isWinner }) => {
   );
 };
 
-export default Square;
+SquareLayout.propTypes = {
+  value: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
+  isWinner: PropTypes.bool
+};
+
+export default SquareLayout;

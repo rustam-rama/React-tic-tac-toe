@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import './Game.css';
-import Game from './components/Game';
+import Game from './components/Game/Game';
 
 function App() {
   return (
-    <div className="app">
-      <Game />
-    </div>
+    <StrictMode>
+      <div className="app">
+        <Game />
+      </div>
+    </StrictMode>
   );
 }
 

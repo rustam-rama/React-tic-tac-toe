@@ -1,20 +1,5 @@
 import React, { useState } from 'react';
-import Square from './Field';
-
-const Board = ({ squares, onClick, winLine }) => {
-  return (
-    <div className="board">
-      {squares.map((square, index) => (
-        <Square 
-          key={index} 
-          value={square} 
-          onClick={() => onClick(index)}
-          isWinner={winLine?.includes(index)} 
-        />
-      ))}
-    </div>
-  );
-};
+import Board from './Board';
 
 const Game = () => {
   const [squares, setSquares] = useState(Array(9).fill(null));
